@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Local
     "accounts",
+    "pages",
+    # 3rd party
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -133,3 +138,9 @@ LOGIN_REDIRECT_URL = "home"
 # Redirect url for Logout
 
 LOGOUT_REDIRECT_URL = "home"
+
+# Allowing crispy bootstrap5 packs to be used
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
