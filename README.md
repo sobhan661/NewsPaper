@@ -1,6 +1,6 @@
 # NewsPaper CRM
 
-## ℹ️ Overview
+## Overview
 
 **NewsPaper** is a Django‑based news publishing platform that allows users to create, manage, and read news articles. It provides a solid foundation for learning Django concepts such as authentication, models, views, templates, and routing.
 
