@@ -3,24 +3,30 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-{% if user.is_authenticated %}
-<p>
-  Hello {{ user.username }}, You are {{ user.age }} years old.
-</p>
-<form action="{% url 'logout' %}" method="post"> {% csrf_token %}
-  <button type="submit">
-    Logout
-  </button>
-</form>
-{% else %}
-<p>
-  You are not logged in
-</p>
-<a href="{% url 'signup' %}">
-  Sign Up
-</a>
-<a href="{% url 'login' %}">
-  Login
-</a>
-{% endif %}
+  {% if user.is_authenticated %}
+  <p>
+    Hello {{ user.username }}, You are {{ user.age }} years old.
+  </p>
+  <form action="{% url 'logout' %}" method="post"> {% csrf_token %}
+    <button type="submit">
+      Logout
+    </button>
+  </form>
+  <br />
+  <p>
+    <a class="btn btn-primary" href="{% url 'articles_list' %}" role="button">
+  View all articles
+    </a>
+  </p>
+  {% else %}
+  <p>
+    You are not logged in
+  </p>
+  <a href="{% url 'signup' %}">
+    Sign Up
+  </a>
+  <a href="{% url 'login' %}">
+    Login
+  </a>
+  {% endif %}
 {% endblock content %}

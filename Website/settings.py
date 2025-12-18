@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     "pages",
+    "articles",
     # 3rd party
     "crispy_forms",
     "crispy_bootstrap5",
@@ -110,7 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+# Timezone set to tehran
+
+TIME_ZONE = "Asia/Tehran"
 
 USE_I18N = True
 
