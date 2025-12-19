@@ -17,6 +17,7 @@ The goal of this project was to strengthen my Django skills.
 * Templated views using Django’s template engine
 * Modular Django app structure
 * Easy to customize and extend
+* Adding comment under each article (New)
 
 ---
 
