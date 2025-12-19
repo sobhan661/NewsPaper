@@ -16,13 +16,15 @@
   </div>
   <div>
     <p>
-      <a href="{% url 'article_edit' article.pk %}">
-        Edit
-      </a>
-      |
-      <a href="{% url 'article_delete' article.pk %}">
-        Delete
-      </a>
+      {% if article.author.pk == request.user.pk %}
+        <a href="{% url 'article_edit' article.pk %}">
+          Edit
+        </a>
+        |
+        <a href="{% url 'article_delete' article.pk %}">
+          Delete
+        </a>
+      {% endif %}
     </p>
     <p>
       <a href="{% url 'articles_list' %}">
